@@ -57,4 +57,58 @@ footer a {
     font-size: 30px;
 }
 
+    nav ul li {
+        width: 23%; /* from above */
+        float: left; }
 
+        .navbar {
+            position: fixed; 
+            top: 0;        
+            left: 0;       
+            right: 0;       
+            z-index: 100;   
+            background-color: #4caf4f3a; 
+            padding: 40px;
+            box-shadow: inset;
+        }
+
+      nav ul li  a {
+        position: relative;
+        margin: 300px auto 0;
+        width: 500px;
+        height: 250px;
+        background: linear-gradient(0deg, #000000, #272727);
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+        }
+        
+       nav ul li a:before, nav ul li a::after{  content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        background: linear-gradient(45deg, #00ff00, #000000, #00ff00,#000000, #00ff00, #000000, 
+          #00ff00, #000000,#00ff00, #000000);
+        background-size: 400%;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        z-index: -1;
+        animation: steam 20s linear infinite;
+        }
+        
+        
+        @keyframes steam {
+            0% {
+              background-position: 0 0;
+            }
+            50% {
+              background-position: 400% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+          }
+
+          nav ul li a:after {
+            filter: blur(50px);
+          }
