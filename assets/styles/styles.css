@@ -80,7 +80,7 @@ footer a {
         background: linear-gradient(0deg, #000000, #272727);
         color: white;
         font-weight: bold;
-        padding: 5px;
+        padding: 10px;
         }
         
        nav ul li a:before, nav ul li a::after{  content: '';
