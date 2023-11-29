@@ -74,27 +74,56 @@ footer p {
     right: 0;
     z-index: 100;
     background-color: #ffffff3a;
-    padding: 15px;
+    padding: 25px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* This will vertically center the items */
+    padding: 0;
+    margin: 0;
     list-style-type: none;
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center; /* This ensures the logo is centered vertically */
 }
 
-.navbar ul li {
-    flex: 1; /* Equal space distribution */
-    text-align: center;
-}
+
 
 ul li a {
     color: black;
     font-weight: bold;
+    line-height: normal; /* Adjust this to center the text vertically */
+    padding: 0 15px; /* Adjust horizontal padding if needed */
+    display: block; /* Makes the entire area clickable */
+    text-decoration: none;
 }
+
+
+.navbar-logo {
+    max-width: 120px; /* or any other fixed size that fits well */
+    max-height: 100%; /* maintain aspect ratio */
+    margin-right: 20px; /* adjust space between logo and menu items */
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        max-width: 80px; /* Smaller logo for mobile devices */
+        margin-right: 10px; /* Less space for smaller screens */
+    }
+    /* Other responsive styles */
+}
+
+
+
 
 /* Responsive adjustments for tablets */
 @media screen and (max-width: 768px) {
