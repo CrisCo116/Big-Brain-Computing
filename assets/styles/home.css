@@ -9,33 +9,90 @@ html {
 
 body {
     text-align: center;
+   
 }
 
+@keyframes dropIn {
+    from {
+        transform: translateY(-100vh); /* Start off-screen, above the viewport */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* End at its final position */
+        opacity: 1;
+    }
+}
+
+/* Define the drop-in animation */
+@keyframes dropIn {
+    from {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Define the vanish animation */
+@keyframes vanish {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* Apply the chained animations to the header container */
 .header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 1;
+    padding: 10px;
+  
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.836);
+    margin-top: 100px;
+    /* Drop-in animation */
+    animation: dropIn 1s ease-out forwards,
+               vanish 1s ease-out forwards 10s; /* Vanish after 15 seconds */
 }
 
-header h1 {
-    font-size: 5vw; /* Responsive font size */
-    color: rgba(255, 255, 255, 0.87);
-    text-shadow: 4px 4px rgb(80, 78, 78);
-    position: absolute;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.header h1 {
+    font-size: 1.8em;
+    color: #000000;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-logo {
+    height: 1.2em;
+    vertical-align: -.1em;
+    margin-right: 1px;
+    z-index: 2;
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .header-logo {
+        height: 40px; /* Smaller logo for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        height: 30px; /* Even smaller logo for mobile screens */
+    }
 }
 
 #bg-video {
     position: absolute;
-    filter: brightness(1.5) contrast(1.1);
+    filter: brightness(1.2) contrast(1.1);
     bottom: 0;
     left: 0;
     width: 100vw; /* Full viewport width */
@@ -73,7 +130,7 @@ footer p {
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: #ffffff3a;
+    background-color: #ffffff;
     padding: 25px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -87,7 +144,6 @@ footer p {
     list-style-type: none;
 }
 
-
 .navbar ul li a {
     text-decoration: none;
     padding: 0;
@@ -95,8 +151,6 @@ footer p {
     display: flex;
     align-items: center; /* This ensures the logo is centered vertically */
 }
-
-
 
 ul li a {
     color: black;
@@ -106,7 +160,6 @@ ul li a {
     display: block; /* Makes the entire area clickable */
     text-decoration: none;
 }
-
 
 .navbar-logo {
     max-width: 120px; /* or any other fixed size that fits well */
@@ -121,9 +174,6 @@ ul li a {
     }
     /* Other responsive styles */
 }
-
-
-
 
 /* Responsive adjustments for tablets */
 @media screen and (max-width: 768px) {
@@ -150,4 +200,3 @@ ul li a {
         font-size: 4vw;
     }
 }
-
