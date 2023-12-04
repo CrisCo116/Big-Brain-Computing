@@ -1,0 +1,351 @@
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(15, 15, 15);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  line-height: normal;
+}
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+.navbar .navbar-logo {
+  max-width: 120px;
+  max-height: 100%;
+  margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px - 25px * 2);
+  margin-top: 85px;
+  perspective: 1000px;
+}
+.container .left, .container .right {
+  position: relative;
+  flex: 1;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.container .left .inner-layer, .container .right .inner-layer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background-color: #000000;
+  box-shadow: 8px 4px 8px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.5s ease;
+}
+
+.glitch, .glow {
+  color: rgb(234, 227, 227);
+  position: relative;
+  font-size: 7vw;
+  animation: glitch 5s 5s infinite;
+  padding-left: 25px;
+}
+
+.glitch::before, .glow::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: -5px 0 rgb(0, 145, 255);
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  top: 0;
+  padding-left: 25px;
+  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+
+.glitch::after, .glow::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -5px 0 gold;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  padding-left: 25px;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+
+@keyframes glitch {
+  1% {
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+@keyframes noise-1 {
+  3.3333333333% {
+    clip-path: inset(77px 0 15px 0);
+  }
+  6.6666666667% {
+    clip-path: inset(19px 0 31px 0);
+  }
+  10% {
+    clip-path: inset(35px 0 55px 0);
+  }
+  13.3333333333% {
+    clip-path: inset(38px 0 20px 0);
+  }
+  16.6666666667% {
+    clip-path: inset(95px 0 6px 0);
+  }
+  20% {
+    clip-path: inset(56px 0 5px 0);
+  }
+  23.3333333333% {
+    clip-path: inset(53px 0 45px 0);
+  }
+  26.6666666667% {
+    clip-path: inset(28px 0 68px 0);
+  }
+  30% {
+    clip-path: inset(9px 0 28px 0);
+  }
+  33.3333333333% {
+    clip-path: inset(64px 0 19px 0);
+  }
+  36.6666666667% {
+    clip-path: inset(16px 0 19px 0);
+  }
+  40% {
+    clip-path: inset(64px 0 36px 0);
+  }
+  43.3333333333% {
+    clip-path: inset(98px 0 3px 0);
+  }
+  46.6666666667% {
+    clip-path: inset(55px 0 39px 0);
+  }
+  50% {
+    clip-path: inset(92px 0 7px 0);
+  }
+  53.3333333333% {
+    clip-path: inset(58px 0 23px 0);
+  }
+  56.6666666667% {
+    clip-path: inset(96px 0 5px 0);
+  }
+  60% {
+    clip-path: inset(29px 0 49px 0);
+  }
+  63.3333333333% {
+    clip-path: inset(27px 0 44px 0);
+  }
+  66.6666666667% {
+    clip-path: inset(4px 0 17px 0);
+  }
+  70% {
+    clip-path: inset(81px 0 9px 0);
+  }
+  73.3333333333% {
+    clip-path: inset(32px 0 19px 0);
+  }
+  76.6666666667% {
+    clip-path: inset(92px 0 4px 0);
+  }
+  80% {
+    clip-path: inset(67px 0 20px 0);
+  }
+  83.3333333333% {
+    clip-path: inset(35px 0 32px 0);
+  }
+  86.6666666667% {
+    clip-path: inset(68px 0 14px 0);
+  }
+  90% {
+    clip-path: inset(61px 0 25px 0);
+  }
+  93.3333333333% {
+    clip-path: inset(97px 0 3px 0);
+  }
+  96.6666666667% {
+    clip-path: inset(84px 0 9px 0);
+  }
+  100% {
+    clip-path: inset(37px 0 6px 0);
+  }
+}
+@keyframes noise-2 {
+  0% {
+    clip-path: inset(78px 0 11px 0);
+  }
+  3.3333333333% {
+    clip-path: inset(2px 0 80px 0);
+  }
+  6.6666666667% {
+    clip-path: inset(97px 0 2px 0);
+  }
+  10% {
+    clip-path: inset(44px 0 13px 0);
+  }
+  13.3333333333% {
+    clip-path: inset(69px 0 1px 0);
+  }
+  16.6666666667% {
+    clip-path: inset(51px 0 19px 0);
+  }
+  20% {
+    clip-path: inset(17px 0 61px 0);
+  }
+  23.3333333333% {
+    clip-path: inset(95px 0 2px 0);
+  }
+  26.6666666667% {
+    clip-path: inset(14px 0 18px 0);
+  }
+  30% {
+    clip-path: inset(6px 0 61px 0);
+  }
+  33.3333333333% {
+    clip-path: inset(78px 0 4px 0);
+  }
+  36.6666666667% {
+    clip-path: inset(92px 0 3px 0);
+  }
+  40% {
+    clip-path: inset(37px 0 57px 0);
+  }
+  43.3333333333% {
+    clip-path: inset(4px 0 9px 0);
+  }
+  46.6666666667% {
+    clip-path: inset(68px 0 7px 0);
+  }
+  50% {
+    clip-path: inset(55px 0 10px 0);
+  }
+  53.3333333333% {
+    clip-path: inset(25px 0 39px 0);
+  }
+  56.6666666667% {
+    clip-path: inset(76px 0 21px 0);
+  }
+  60% {
+    clip-path: inset(27px 0 5px 0);
+  }
+  63.3333333333% {
+    clip-path: inset(58px 0 20px 0);
+  }
+  66.6666666667% {
+    clip-path: inset(12px 0 18px 0);
+  }
+  70% {
+    clip-path: inset(12px 0 74px 0);
+  }
+  73.3333333333% {
+    clip-path: inset(64px 0 28px 0);
+  }
+  76.6666666667% {
+    clip-path: inset(68px 0 5px 0);
+  }
+  80% {
+    clip-path: inset(16px 0 69px 0);
+  }
+  83.3333333333% {
+    clip-path: inset(93px 0 8px 0);
+  }
+  86.6666666667% {
+    clip-path: inset(88px 0 4px 0);
+  }
+  90% {
+    clip-path: inset(32px 0 1px 0);
+  }
+  93.3333333333% {
+    clip-path: inset(60px 0 38px 0);
+  }
+  96.6666666667% {
+    clip-path: inset(82px 0 12px 0);
+  }
+  100% {
+    clip-path: inset(48px 0 11px 0);
+  }
+}
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 0.5%, transparent 1%);
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+.glow {
+  text-shadow: 0 0 1000px rgb(223, 191, 191);
+  color: transparent;
+  position: absolute;
+  top: 0;
+}
+
+.subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 0.8vw;
+  color: gold;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  text-align: center;
+  position: absolute;
+  left: 17%;
+  animation: glitch-2 5s 5.02s infinite;
+}
+
+@keyframes glitch-2 {
+  1% {
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  2% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+/*# sourceMappingURL=ourwork.css.map */
