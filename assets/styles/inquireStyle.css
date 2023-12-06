@@ -104,10 +104,10 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    left: 550px;
-    top: 300px;
+    width: 850px; /* Adjusted width to be 50% bigger */
     position: relative;
+    left: 500px;
+    top: 300px;
 }
 
 label {
@@ -134,3 +134,23 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+
+.form-phone{
+justify-content: left;
+}
+
+.form-email{
+justify-content: right;
+}
+
+.contact-info-form{
+    display: flex;
+   
+}
+.contact-info-form h1 {
+padding-left: 150px;
+}
+
+
+ 
