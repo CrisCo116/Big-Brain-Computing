@@ -1,0 +1,68 @@
+$navbar-padding: 25px;
+$navbar-height: 60px;
+$navbar-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(15, 15, 15);
+  }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $navbar-height;
+  background-color: #ffffff;
+  padding: $navbar-padding;
+  box-shadow: $navbar-shadow;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li a {
+      text-decoration: none;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      color: black;
+      font-weight: bold;
+      line-height: normal;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .navbar-logo {
+    max-width: 120px;
+    max-height: 100%;
+    margin-right: 20px;
+  }
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+  
+  
+  
