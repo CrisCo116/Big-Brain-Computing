@@ -1,3 +1,0 @@
-stars.mp4 filter=lfs diff=lfs merge=lfs -text
-clouds.mp4 filter=lfs diff=lfs merge=lfs -text
-rain.mp4 filter=lfs diff=lfs merge=lfs -text
