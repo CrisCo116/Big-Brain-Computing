@@ -1,178 +1,56 @@
-/* Base styles */
 html {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(15, 15, 15);
-}
-
-body {
-    text-align: center;
-   
-}
-
-@keyframes dropIn {
-    from {
-        transform: translateY(-100vh); /* Start off-screen, above the viewport */
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0); /* End at its final position */
-        opacity: 1;
-    }
-}
-
-
-.header {
-    padding: 10px;
-  
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.836);
-    margin-top: 100px;
-   
-}
-
-.header h1 {
-    font-size: 1.8em;
-    color: #000000;
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.header-logo {
-    height: 1.2em;
-    vertical-align: -.1em;
-    margin-right: 1px;
-    z-index: 2;
-}
-
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .header-logo {
-        height: 40px; /* Smaller logo for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .header-logo {
-        height: 30px; /* Even smaller logo for mobile screens */
-    }
-}
-
-#bg-video {
-    position: absolute;
-    filter: brightness(1.2) contrast(1.1);
-    bottom: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover;
-    z-index: -1;
-}
-
-@media (min-width: 1188px) {
-    .main-content {
-        position: relative;
-        height: 1000px;
-    }
-}
-
-footer {
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-}
-
-footer p {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 2vw; /* Responsive font size */
-    font-weight: bolder;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(15, 15, 15);
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: #ffffff;
-    padding: 25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-
 .navbar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* This will vertically center the items */
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
-
 .navbar ul li a {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center; /* This ensures the logo is centered vertically */
+  text-decoration: none;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  line-height: normal;
+}
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+.navbar .navbar-logo {
+  max-width: 120px;
+  max-height: 100%;
+  margin-right: 20px;
 }
 
-ul li a {
-    color: black;
-    font-weight: bold;
-    line-height: normal; /* Adjust this to center the text vertically */
-    padding: 0 15px; /* Adjust horizontal padding if needed */
-    display: block; /* Makes the entire area clickable */
-    text-decoration: none;
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.navbar-logo {
-    max-width: 120px; /* or any other fixed size that fits well */
-    max-height: 100%; /* maintain aspect ratio */
-    margin-right: 20px; /* adjust space between logo and menu items */
-}
-
-
-
-@media (max-width: 768px) {
-    .navbar-logo {
-        max-width: 80px; /* Smaller logo for mobile devices */
-        margin-right: 10px; /* Less space for smaller screens */
-    }
-    /* Other responsive styles */
-}
-
-/* Responsive adjustments for tablets */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 6vw;
-    }
-
-    footer p {
-        font-size: 3vw;
-    }
-}
-
-/* Responsive adjustments for mobile */
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 8vw;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    footer p {
-        font-size: 4vw;
-    }
-}
+/*# sourceMappingURL=home.css.map */

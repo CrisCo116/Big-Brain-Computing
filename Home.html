@@ -9,47 +9,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Kanit&family=Noto+Sans+JP:wght@100&family=PT+Serif&family=Press+Start+2P&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    
 </head>
-<nav class="navbar">
-    <ul>
-        <li>
-            <a href="home.html">
-                <img src="assets/images/3NW Lofo.png" class="navbar-logo" alt="logo">
-            </a>
-      <li>
-          <a href= 'inquire.html'>Inquire</a>
-      </li>
-      <li>
-        <a href="AboutUs.html">3NW Team</a>
-      </li>
-      <li>
-          <a href=”/OurWork”>Our Work</a>
-      </li>
-    </ul>
-  </nav>
+
 <body>
-    <header>
-        <div class="header">
-            <h1>
-                <img src="assets/images/3NW.png" alt="3NW" class="header-logo">
-            - Innovative Solutions from the Heart of the Pacific Northwest
-            </h1>
-        </div>
-    </header>
-    
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <img src="assets/images/3NW Lofo.png" class="navbar-logo" alt="logo">
+                </a>
+            </li>
+            <li>
+                <a href='inquire.html'>Inquire</a>
+            </li>
+            <li>
+                <a href="AboutUs.html">3NW Team</a>
+            </li>
+            <li>
+                <a href="ourwork.html">Our Work</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="mast">
+        <figure class="mast__bg" style="background-image:url(https://unsplash.it/1800/800?image=893)"></figure>
+        <header class="mast__header">
+            <h1 class="mast__title js-spanize">3NW Software Development</h1>
+            <hr class="sep"/>
+            <p class="mast__text js-spanize">
+                Empowering Small Businesses, Building Stronger Communities | 
+                Together with 3NW Software, Your Vision Becomes Our Mission.
+            </p>
+        </header>
+    </section>
 
     <main>
-        <video autoplay muted loop poster="assets/images/PNW.mp4" id="bg-video" class="bg-video">
-            <source src="assets/images/PNW.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <section class="parallax">
+            <video autoplay muted loop poster="assets/images/PNW.mp4" id="bg-video" class="bg-video">
+                <source src="assets/images/PNW.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2023 3NW LLC. All rights reserved.</p>
     </footer>
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/home.js"></script>
 </body>
 
 </html>
