@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "bootstrap": "^5.3.2",
     "dotenv": "^16.3.1",
