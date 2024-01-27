@@ -1,253 +1,209 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: #ffffff;
-    padding: 25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-
 .navbar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* This will vertically center the items */
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the items */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
-
 .navbar ul li a {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center; 
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.navbar-logo {
+  max-width: 120px;
+  max-height: 100%;
+  margin-right: 20px;
 }
 
 ul li a {
-    color: black;
-    font-weight: bold;
-    line-height: normal; 
-    padding: 0 15px; 
-    display: block; 
-    text-decoration: none;
-}
-
-.navbar-logo {
-    max-width: 120px; 
-    max-height: 100%; 
-    margin-right: 20px; 
+  color: black;
+  font-weight: bold;
+  line-height: normal;
+  padding: 0 15px;
+  display: block;
+  text-decoration: none;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 @keyframes slideInFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100vw); /* Start from the left outside of the viewport */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 @keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(100vw); /* Start from the right outside of the viewport */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 @keyframes slideInFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(100vh); /* Start from the bottom outside of the viewport */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 .card-container {
-    display: flex;
-    overflow-x: auto;
+  display: flex;
+  overflow-x: auto;
 }
 
 .card {
-    margin: 50px;
-    padding: 50px;
-    width: 300px;
-    background-color:whitesmoke;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    perspective: 1000px;
-    height: 450px; 
-    opacity: 0;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+  margin: 50px;
+  padding: 50px;
+  width: 300px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  perspective: 1000px;
+  height: 450px;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
-
 .card.slide-in-left {
-    animation-name: slideInFromLeft;
+  animation-name: slideInFromLeft;
 }
-
 .card.slide-in-right {
-    animation-name: slideInFromRight;
+  animation-name: slideInFromRight;
 }
-
 .card.slide-in-bottom {
-    animation-name: slideInFromBottom;
+  animation-name: slideInFromBottom;
 }
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
-
 .card.flipped .card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-
 .card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
 }
-
 .card-front {
-    background-color: #fff; 
-    color: #333; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
-
 .card-front h2 {
-    font-size: 1.5em; 
-    margin: 0;
-    color: #007bff; 
+  font-size: 1.5em;
+  margin: 0;
+  color: #007bff;
 }
-
 .card-front .role {
-    font-size: 1em;
-    color: #666; 
-    margin-top: 10px;
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
 }
-
-
 .card-back {
-    /* Back card styling */
-    transform: rotateY(180deg);
-    background-color: rgb(255, 255, 255);
-    color: black;
+  transform: rotateY(180deg);
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
-.bio {
-    margin-top: 15px;
+.card .bio {
+  margin-top: 15px;
 }
 
 footer {
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
+  margin-top: auto;
+  color: rgba(240, 240, 240, 0.8941176471);
+  text-align: center;
+  z-index: 3;
 }
-
-footer p {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 2vw; /* Responsive font size */
-    font-weight: bolder;
-}
-
 
 #bg-video {
-    position: absolute;
-    filter: brightness(1.2) contrast(1.1);
-    bottom: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  filter: brightness(1.2) contrast(1.1);
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
-
-
-
-
-
-
-
 
 @media (min-width: 1188px) {
-    .main-content {
-        position: relative;
-        height: 1000px;
-    }
+  .main-content {
+    position: relative;
+    height: 1000px;
+  }
 }
-
 @media screen and (max-width: 768px) {
-    .card {
-        width: 80%; /* Adjust width for smaller screens */
-        margin: 20px; /* Adjust margin for smaller screens */
-    }
-
-    .navbar-logo {
-        max-width: 80px; /* Smaller logo for mobile devices */
-    }
-
-    .navbar ul li a {
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-
-    footer p {
-        font-size: 4vw; /* Adjust font size for smaller screens */
-    }
+  .card {
+    width: 80%;
+    margin: 20px;
+  }
+  .navbar-logo {
+    max-width: 80px;
+  }
+  .navbar ul li a {
+    padding: 0 10px;
+  }
+  footer p {
+    font-size: 4vw;
+  }
 }
-
-/* Responsive adjustments for mobile */
 @media screen and (max-width: 480px) {
-    .navbar {
-        /* Adjust navbar styles for mobile */
-    }
-
-    .navbar ul {
-        flex-direction: column; /* Stack navbar items vertically */
-    }
-
-    .card {
-        width: 90%; /* Adjust card width for mobile screens */
-    }
-
-    footer p {
-        font-size: 5vw; /* Adjust font size for smaller screens */
-    }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .card {
+    width: 90%;
+  }
+  footer p {
+    font-size: 5vw;
+  }
 }
+
+/*# sourceMappingURL=aboutus.css.map */
