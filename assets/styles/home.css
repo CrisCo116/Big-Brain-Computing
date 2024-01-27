@@ -43,6 +43,7 @@ body {
 }
 .navbar ul li a:hover {
   text-decoration: underline;
+  color: #5ac7ff;
 }
 .navbar .navbar-logo {
   max-width: 120px;
@@ -71,16 +72,14 @@ main {
   width: 100%;
 }
 
-.info-container {
-  width: 100%;
-  padding: 200px;
-  background-color: #f0f0f0;
-  box-sizing: border-box;
-  z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
 .info-container h2 {
-  font-size: 5em;
+  font-size: 10em;
+  text-shadow: -1px 1px 0 #ffd217, 1px 1px 0 #5ac7ff, 1px -1px 0 #ffd217, -1px -1px 0 #5ac7ff;
+}
+.info-container p {
+  font-weight: 100;
+  font-style: bold;
+  font-size: 200%;
 }
 
 footer {
@@ -88,6 +87,42 @@ footer {
   color: rgba(240, 240, 240, 0.8941176471);
   text-align: center;
   z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+    height: 50px;
+  }
+  .navbar ul li a {
+    padding: 0 10px;
+  }
+  .navbar-logo {
+    max-width: 100px;
+  }
+  main {
+    padding: 30px 0;
+  }
+  .info-container h2 {
+    font-size: 5em;
+  }
+  .info-container p {
+    font-size: 150%;
+  }
+}
+@media (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar ul li a {
+    padding: 5px 0;
+  }
+  .info-container h2 {
+    font-size: 4em;
+  }
+  .info-container p {
+    font-size: 120%;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
