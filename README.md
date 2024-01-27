@@ -10,7 +10,7 @@ We are a passionate team of web developers dedicated to creating innovative and 
 
 - **Frontend Development:**
   - HTML
-  - CSS
+  - CSS/SCSS
   - JavaScript
   - 
   - 
