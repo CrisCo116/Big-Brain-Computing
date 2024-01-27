@@ -85,11 +85,17 @@ main {
 
 // Home Container
 .info-container {
-  width: 99%; 
+  width: 100%; 
   padding: 200px;
-  background-color: #f0f0f0e0; 
+  background-color: #f0f0f0; 
   box-sizing: border-box;
   z-index: 0;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  h2 { font-size: 5em;
+
+
+  }
   
 }
 
