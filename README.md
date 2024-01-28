@@ -73,3 +73,5 @@ This website is licensed under the [MIT License](LICENSE).
 ---
 
 Thank you for visiting our website! We look forward to connecting with you and creating amazing web experiences together.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/db2b3ff0-c678-4fa4-a3ca-47c3c0a05589/deploy-status)](https://app.netlify.com/sites/3nw/deploys)
