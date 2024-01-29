@@ -191,4 +191,65 @@ footer p {
   font-weight: bolder;
 }
 
+/* Modified CSS for mobile-friendliness */
+@media (max-width: 768px) {
+  body .midContainer h1 {
+    font-size: 3px; /* Adjust font size for smaller screens */
+    left: 10%; /* Adjust position */
+    top: 20%; /* Adjust position */
+  }
+  body .midContainer h2 {
+    font-size: 3px; /* Adjust font size for smaller screens */
+    left: 1%; /* Adjust position */
+    top: 25%; /* Adjust position */
+    width: 80%; /* Adjust width */
+  }
+  body .midContainer h3 {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+    left: 5%; /* Adjust position */
+    top: 60%; /* Adjust position */
+    width: 90%; /* Adjust width */
+    text-align: left; /* Adjust text alignment */
+  }
+  body .navBar {
+    width: 100%; /* Adjust width */
+    left: 5%; /* Adjust position */
+    top: 10%; /* Adjust position */
+  }
+  body form {
+    width: 90%; /* Adjust width */
+    left: 5%; /* Adjust position */
+    top: 20%; /* Adjust position */
+  }
+  .navbar ul li a {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body .midContainer h1 {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+  body .midContainer h2 {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+    width: 90%; /* Adjust width */
+  }
+  body .midContainer h3 {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+  body .navBar {
+    width: 100%; /* Adjust width */
+    left: 0; /* Adjust position */
+    top: 0; /* Adjust position */
+  }
+  body form {
+    width: 90%; /* Adjust width */
+    left: 5%; /* Adjust position */
+    top: 20%; /* Adjust position */
+  }
+  .navbar ul li a {
+    padding: 0 5px; /* Adjust padding for smaller screens */
+  }
+}
+
 /*# sourceMappingURL=inquireStyle.css.map */
