@@ -74,7 +74,7 @@ main {
 
 .info-container h2 {
   font-size: 10em;
-  text-shadow: -1px 1px 0 #ffd217, 1px 1px 0 #5ac7ff, 1px -1px 0 #ffd217, -1px -1px 0 #5ac7ff;
+  text-shadow: -1px 1px 0 #4f7cf7, 1px 1px 0 #3abdff, 1px -1px 0 #4f7cf7, -1px -1px 0 #3abdff;
 }
 .info-container p {
   font-weight: 100;
