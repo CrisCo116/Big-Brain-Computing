@@ -66,14 +66,7 @@ body .midContainer2 h2 {
   top: 450px;
   width: 1700px;
 }
-body .scrollable-content {
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  position: relative;
-  z-index: 1;
-  top: 1000px;
-  height: 1000px;
-}
+
 body .scrollable-content::before {
   content: "";
   position: absolute;
@@ -112,6 +105,7 @@ body form button {
   padding: 20px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 body form button:hover {
   background-color: #ffd217;
@@ -151,6 +145,60 @@ body form button:hover {
   max-width: 120px;
   max-height: 100%;
   margin-right: 20px;
+}
+
+/*Styles for the button */
+button {
+    padding: 10px 20px;
+    background-color: #5ac7ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #000000;
+    transition-duration: 280ms;
+}
+
+/* Styling for the hidden page */
+#hiddenPage {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background-color: #f0f0f000;
+    border-radius: 8px;
+    width: 300px;
+    left: 250px;
+    top: 550px;
+    position: center;
+}
+
+#hiddenPage form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#hiddenPage form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#hiddenPage form button {
+    background-color: #5ac7ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#hiddenPage form button:hover {
+    background-color: #ffffff;
+    color: #5ac7ff;
 }
 
 @media (max-width: 768px) {

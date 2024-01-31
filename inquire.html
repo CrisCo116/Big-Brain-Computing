@@ -68,7 +68,39 @@
         </form>
 
     </div>
-         
+    
+    <button onclick="toggleHiddenPage()">Send us a message.</button>
+    
+
+<div id="hiddenPage">
+  
+  <p><div class="scrollable-content"> 
+    <form id="contactForm" action="http://localhost:3000/submit-form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    
+        <button type="submit">Submit</button>
+    </form>
+
+</div></p>
+</div>
+
+<script>
+function toggleHiddenPage() {
+  var hiddenPage = document.getElementById("hiddenPage");
+  if (hiddenPage.style.display === "none") {
+    hiddenPage.style.display = "block"; // Show the hidden page
+  } else {
+    hiddenPage.style.display = "none"; // Hide the hidden page
+  }
+}
+</script>
 
 </body>
 <footer>
