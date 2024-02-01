@@ -166,18 +166,6 @@ button:hover {
 /* Styling for the hidden page */
 #hiddenPage {
     display: none; /* Initially hidden */
-    padding: 20px;
-    background-color: #f0f0f000;
-    border-radius: 8px;
-    width: 300px;
-    left: 250px;
-    top: 550px;
-    position: center;
-}
-
-#hiddenPage form label {
-    display: block;
-    margin-bottom: 8px;
 }
 
 #hiddenPage form input {
@@ -185,20 +173,6 @@ button:hover {
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
-}
-
-#hiddenPage form button {
-    background-color: #5ac7ff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-#hiddenPage form button:hover {
-    background-color: #ffffff;
-    color: #5ac7ff;
 }
 
 @media (max-width: 768px) {
