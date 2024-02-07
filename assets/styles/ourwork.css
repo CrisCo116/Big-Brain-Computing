@@ -1,10 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-html {
-  scroll-behavior: smooth;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   background-color: rgb(15, 15, 15);
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -20,7 +27,7 @@ html {
 }
 .navbar ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -37,6 +44,7 @@ html {
 }
 .navbar ul li a:hover {
   text-decoration: underline;
+  color: #5ac7ff;
 }
 .navbar .navbar-logo {
   max-width: 120px;
