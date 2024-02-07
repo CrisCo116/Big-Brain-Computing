@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquire</title>
-    <link rel="stylesheet" href="assets/styles/home.css"> 
+    <link rel="stylesheet" href="./assets/styles/inquireStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Kanit&family=Noto+Sans+JP:wght@100&family=PT+Serif&family=Press+Start+2P&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Kanit&family=Noto+Sans+JP:wght@100&family=PT+Serif&family=Press+Start+2P&family=Roboto+Mono:wght@300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -34,8 +37,33 @@
     </nav>
     <img src="./assets/images/trees.jpg" alt="bg-img">
 
-  <footer>
-      <p>&copy; 2023 3NW LLC. All rights reserved.</p>
-  </footer>
+    <div>
+        <form>
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-sm" id="colFormLabelSm"
+                        placeholder="col-form-label-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Subject:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Message:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-lg" id="colFormLabelLg"
+                        placeholder="col-form-label-lg">
+                </div>
+            </div>
+        </form>
+    </div>
 
-  </body>
+    <footer>
+        <p>&copy; 2023 3NW LLC. All rights reserved.</p>
+    </footer>
+
+</body>
