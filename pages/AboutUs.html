@@ -1,90 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3NW Software Development</title>
-    <link rel="stylesheet" href="../assets/styles/aboutus.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Kanit&family=Noto+Sans+JP:wght@100&family=PT+Serif&family=Press+Start+2P&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/aboutus.css"> <!-- Update the path as needed -->
 </head>
-
 <body>
 
+    <!-- Navbar (unchanged) -->
     <nav class="navbar">
         <ul>
-            <li>
-                <a href="./Home.html">
-                    <img src="../assets/images/3NW Lofo.png" class="navbar-logo" alt="logo">
-                </a>
-            <li>
-                <a href='./inquire.html'>Inquire</a>
-            </li>
-            <li>
-                <a href="./AboutUs.html">3NW Team</a>
-            </li>
-            <li>
-                <a href="./ourwork.html">Our Work</a>
-            </li>
-            <li>
-                <a href="./payments.html">Payments</a>
-            </li>
+            <li><a href="./Home.html"><img src="../assets/images/3NW Lofo.png" class="navbar-logo" alt="logo"></a></li>
+            <li><a href='./inquire.html'>Inquire</a></li>
+            <li><a href="./AboutUs.html">3NW Team</a></li>
+            <li><a href="./ourwork.html">Our Work</a></li>
+            <li><a href="./payments.html">Payments</a></li>
         </ul>
     </nav>
-    
 
-
-
-    <div class="card slide-in-left" style="--animation-order: 0;"  id= "card1">
-        <div class="card-inner">
-            <div class="card-face card-front">
-                <h2>John Hazuka</h2>
-                <p class="role">Co-Founder/Software Devloper</p>
-            </div>
-            <div class="card-face card-back">
-                <div class="bio">[Bio will be loaded here]</div>
-            </div>
-        </div>
-    </div>
-    
-    
-
-    <div class="card slide-in-bottom" style="--animation-order: 2;" id="card1">
-        <div class="card-inner">
-            <div class="card-face card-front">
-                <h2>Chris Lerwick</h2>
-                <p class="role">Co-Founder/Software Developer</p>
-            </div>
-            <div class="card-face card-back">
-                <div class="bio">[Bio will be loaded here]</div>
-            </div>
-        </div>
+    <!-- Team Sections -->
+    <div class="team-section" id="team1">
+        <h2>3NW</h2>
+        <p>3NW, based in the vibrant Pacific Northwest, is a forward-thinking startup dedicated to crafting exceptional digital experiences. Specializing in web development, mobile gaming, and software applications, we're passionate about delivering great entertainment and sophisticated web solutions. Our mission extends beyond creating engaging digital content; we're committed to fostering growth for businesses through innovative web development strategies. At 3NW, building lasting working relationships is at the heart of what we do, as we aim to empower our consumers and partners with cutting-edge technology and creative solutions.</p>
     </div>
 
-    <div class="card slide-in-right" style="--animation-order: 3;" id="card1">
-        <div class="card-inner">
-            <div class="card-face card-front">
-                <h2>Trevis Williams</h2>
-                <p class="role">Co-Founder/Software Developer</p>
-            </div>
-            <div class="card-face card-back">
-                <div class="bio">[Bio will be loaded here]</div>
-            </div>
-        </div>
+    <div class="team-section" id="team2">
+        <h2>Our team</h2>
+        <p>Description or bio of the team member.</p>
     </div>
 
-    <main>
-        <video autoplay muted loop poster="assets/images/rain.mp4" id="bg-video" class="bg-video">
-            <source src="assets/images/rain.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+    <section>
+        <video autoplay muted loop id="bg-video" class="bg-video">
+            <source src="../assets/images/clouds.mp4" type="video/mp4">
+            Your browser does not support the video tag or the file format of this video.
         </video>
-    </main>
+    </section>
 
-<script src="JS/aboutUs.js"></script>
-</body>
-<footer>
+    <footer>
         <p>&copy; 2023 3NW LLC. All rights reserved.</p>
     </footer>
+
+</body>
 </html>
