@@ -52,18 +52,75 @@ body {
 }
 
 .form-container {
-  display: flex;
+  display: none;
+  margin-top: 20px; /* Add margin to separate the image and form */
+  width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust as needed */
 }
 
 .form-group {
-  width: 50%; /* Adjust the width of the form container as needed */
+  width: 15%; /* Adjust the width of the form container as needed */
+  background-color: #ffffff; /* Optional: add a background color to the form */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.137);
 }
+
+.form-group textarea {
+  height: 100px; /* Adjust the height of the textarea as needed */
+}
+
+.form-group input[type="submit"] {
+  background-color: #5ac7ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #4aadee;
+}
+
+.trees {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Ensure the container fills its parent */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.trees img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Stretch the image to cover the container */
+}
+
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%; /* Adjust the height of the fade as needed */
+  background: linear-gradient(to bottom, rgba(15, 15, 15, 0), rgb(15, 15, 15) 100%);
+  pointer-events: none; /* Allow clicks to fall through the overlay */
+}
+
+
 
 @media (max-width: 768px) {
   .form-group {
     width: 80%; /* Adjust the width for smaller screens */
   }
 }
+
+footer {
+  margin-top: auto;
+  color: rgba(240, 240, 240, 0.8941176471);
+  text-align: center;
+  z-index: 3;
+}
+
