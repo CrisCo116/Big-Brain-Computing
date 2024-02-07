@@ -1,0 +1,23 @@
+const clientId = "CLIENT-ID";
+        const sellerPayerId = "SELLER-PAYER-ID"
+        const jwt = getAuthAssertionValue(clientId, sellerPayerId);
+        console.log(jwt);
+        function getAuthAssertionValue(clientId, sellerPayerId) {
+            const header = {
+                "alg": "none"
+            };
+            const encodedHeader = base64url(header);
+            const payload = {
+                "iss": clientId,
+                "payer_id": sellerPayerId
+            };
+            const encodedPayload = base64url(payload);
+            return `${encodedHeader}.${encodedPayload}.`;
+        }
+        function base64url(json) {
+            return btoa(JSON.stringify(json))
+                .replace(/=+$/, '')
+                .replace(/+/g, '-')
+                .replace(///g, '_');
+        }
+      

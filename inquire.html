@@ -1,73 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inquire</title>
-  <link rel="stylesheet" href="./assets/styles/inquireStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquire</title>
+    <link rel="stylesheet" href="assets/styles/home.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Kanit&family=Noto+Sans+JP:wght@100&family=PT+Serif&family=Press+Start+2P&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <img src="assets/images/3NW Lofo.png" class="navbar-logo" alt="logo">
+                </a>
+            </li>
+            <li>
+                <a href='inquire.html'>Inquire</a>
+            </li>
+            <li>
+                <a href="AboutUs.html">3NW Team</a>
+            </li>
+            <li>
+                <a href="ourwork.html">Our Work</a>
+            </li>
+            <li>
+                <a href="/payments.html">Payments</a>
+            </li>
+        </ul>
+    </nav>
+    <img src="./assets/images/trees.jpg" alt="bg-img">
 
-  <nav class="navbar">
-    <ul>
-      <li>
-        <a href="home.html">
-          <img src="assets/images/3NW Lofo.png" class="navbar-logo" alt="logo">
-        </a>
-      <li>
-        <a href='inquire.html'>Inquire</a>
-      </li>
-      <li>
-        <a href="AboutUs.html">3NW Team</a>
-      </li>
-      <li>
-        <a href="ourwork.html">Our Work</a>
-      </li>
-      <li>
-        <a href="/payments.html">Payments</a>
-      </li>
-    </ul>
-  </nav>
+  <footer>
+      <p>&copy; 2023 3NW LLC. All rights reserved.</p>
+  </footer>
 
-  <video autoplay muted loop poster="./assets/images/matrix.jpg" id="bg-video" class="bg-video">
-    <source src="./assets/images/vecteezy_natural-rocks-and-water-drops-on-top-in-tropical-summer_8417896.mp4"
-      type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="midContainer">
-    <h1>Welcome to 3NW!</h1>
-    <h2>Where ideas become a reality!</h2>
-    <h3>We create custom, elegant designs that reflect thoughtful craftsmanship, uniquely tailored to your needs. Our
-      commitment to excellence extends to quick response times. Beyond design, we provide custom software solutions and
-      expert consulting for comprehensive support. Choose us for a blend of creativity, professionalism, and efficient
-      solutions!</h3>
-  </div>
-
-  <button id="showFormButton">Contact Us</button>
-
-  <div class="scrollable-content hidden" id="hiddenFormContainer">
-    <form id="hiddenContactForm" action="http://localhost:3000/submit-form" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-  
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-  
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-  
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <script src="/JS/inquire.js"></script>
-
-</body>
-<footer>
-  <p>&copy; 2023 3NW LLC. All rights reserved.</p>
-</footer>
-
-</html>
+  </body>
