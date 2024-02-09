@@ -63,15 +63,15 @@ body {
 
 .form-group {
   width: 15%; /* Adjust the width of the form container as needed */
-  background-color: #ffffff; /* Optional: add a background color to the form */
+  background-color: #cfcfcf; /* Optional: add a background color to the form */
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.137);
 }
 
 .form-group textarea {
-  height: 100px; /* Adjust the height of the textarea as needed */
+  height: 75px; /* Adjust the height of the textarea as needed */
 }
 
 .form-group input[type="submit"] {
@@ -112,10 +112,29 @@ body {
 }
 
 .firstP {
+  position: absolute;
+  top: 20%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the elements */
+  z-index: 1; /* Ensure they're above the overlay */
+  text-align: center; /* Center the text */
+  color: rgb(8, 8, 8); /* Text color */
+  width: 80%; /* Adjust width as needed */
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.secondP {
+  position: absolute;
+  top: 35%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the elements */
+  z-index: 1; /* Ensure they're above the overlay */
+  text-align: center; /* Center the text */
+  color: rgb(8, 8, 8); /* Text color */
+  width: 80%; /* Adjust width as needed */
   font-size: 20px;
-  display: block; /* Ensure it's displayed as a block element */
-  position: relative; /* Ensure it's positioned relative to its container */
-  z-index: 1; /* Ensure it's above other elements if necessary */
+  font-weight: bold;
 }
 
 .toggleForm {
@@ -132,7 +151,6 @@ body {
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
   height: 45px;
   justify-content: center;
   line-height: 1;
