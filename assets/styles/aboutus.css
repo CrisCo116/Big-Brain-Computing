@@ -51,12 +51,13 @@ footer {
 }
 
 .header-parallax {
-  background-image: url("/Big-Brain-Computing/assets/images/seattle.jpeg");
+  background-image: url("/Big-Brain-Computing/assets/images/seattle2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   position: fixed;
-  height: 400px;
+  height: 80%;
+  background-position: center;
 }
 
 .header-parallax h1 {
@@ -64,7 +65,7 @@ footer {
   text-shadow: -1px 1px 0 #4f7cf7, 1px 1px 0 #3abdff, 1px -1px 0 #4f7cf7, -1px -1px 0 #3abdff;
   font-weight: 900;
   letter-spacing: 0.16em;
-  font-size: 6em; /* Removed the duplicate font-size property */
+  font-size: 6em;
   padding: 210px 0;
 }
 
