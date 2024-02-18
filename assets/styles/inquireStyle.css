@@ -54,7 +54,6 @@ body {
 }
 
 .form-container {
-  display: none;
   margin-top: 20px; /* Add margin to separate the image and form */
   width: 100%;
   justify-content: center;
@@ -64,8 +63,8 @@ body {
 .form-group {
   width: 15%; /* Adjust the width of the form container as needed */
   background-color: #cfcfcf; /* Optional: add a background color to the form */
-  margin: 0 auto;
-  padding: 10px;
+  padding: 40px;
+  margin: auto;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.137);
 }
@@ -136,56 +135,6 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-
-.toggleForm {
-  align-items: center;
-  width: 20%;
-  margin: 0 auto;
-  margin-top: 20px;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  height: 45px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 30px;
-  padding-right: 30px;
-  position: fixed;
-  bottom: 200px;
-  left: 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
-
-.toggleForm:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-}
-
-.toggleForm:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.toggleForm:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
 
 @media (max-width: 768px) {
   .form-group {
