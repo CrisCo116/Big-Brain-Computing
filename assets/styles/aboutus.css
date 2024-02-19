@@ -50,17 +50,16 @@ footer {
   z-index: 3;
 }
 
-.header-parallax {
-  background-image: url("/Big-Brain-Computing/assets/images/seattle2.jpg");
+.header-parallax, .creators-parallax {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   position: fixed;
   height: 80%;
   background-position: center;
+  background-image: url("/Big-Brain-Computing/assets/images/seattle2.jpg");
 }
-
-.header-parallax h1 {
+.header-parallax h1, .creators-parallax h1 {
   text-align: center;
   text-shadow: -1px 1px 0 #4f7cf7, 1px 1px 0 #3abdff, 1px -1px 0 #4f7cf7, -1px -1px 0 #3abdff;
   font-weight: 900;
@@ -69,34 +68,35 @@ footer {
   padding: 210px 0;
 }
 
-main {
+.creators-parallax {
+  background-image: url("/path/to/another/image.jpg");
+}
+
+main, .creators-content {
   background: #f5f5f5;
   position: relative;
   top: 600px;
   font-family: "Raleway", sans-serif;
   color: #111111;
 }
-
-.container {
+main .container, .creators-content .container {
   padding: 0 26%;
 }
-
-.container h1 {
-  padding: 1.2em 0 0 0;
-  font-size: 3.5em;
+main .container h1, .creators-content .container h1, main .container h2, .creators-content .container h2 {
+  padding-top: 1.2em;
   color: #212121;
 }
-
-.container h2 {
-  padding: 0 0 0.8em 0.4em;
+main .container h1, .creators-content .container h1 {
+  font-size: 3.5em;
+}
+main .container h2, .creators-content .container h2 {
+  padding-bottom: 0.8em;
   font-size: 1.5em;
 }
-
-.container p {
+main .container p, .creators-content .container p {
   padding-bottom: 1em;
   font-size: 1.6em;
   line-height: 1.5;
-  color: #212121;
 }
 
 /*# sourceMappingURL=aboutus.css.map */
