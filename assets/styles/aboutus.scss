@@ -10,6 +10,9 @@ $font-family-base: 'Montserrat', sans-serif;
 $navbar-padding: 25px;
 $navbar-height: 60px;
 $navbar-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$background-color: #f5f5f5;
+$text-color: #111111;
+$font-family: 'Raleway', sans-serif;
 
 // Base styles
 html, body {
@@ -75,52 +78,65 @@ footer {
 
   
   .header-parallax {
-    background-image: url('/Big-Brain-Computing/assets/images/seattle2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     position: fixed;
     height: 80%;
     background-position: center;
+    background-image: url('/Big-Brain-Computing/assets/images/seattle2.jpg');
+  
+    h1 {
+        text-align: center;
+        text-shadow: -1px 1px 0 #4f7cf7, 1px 1px 0 #3abdff, 1px -1px 0 #4f7cf7, -1px -1px 0 #3abdff;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        font-size: 6em; 
+        padding: 210px 0;
+    }
 }
 
-.header-parallax h1 {
-    text-align: center;
-    text-shadow: -1px 1px 0 #4f7cf7, 1px 1px 0 #3abdff, 1px -1px 0 #4f7cf7, -1px -1px 0 #3abdff;
-    font-weight: 900;
-    letter-spacing: 0.16em;
-    font-size: 6em; 
-    padding: 210px 0;
+// Specific styles for the new parallax section
+.creators-parallax {
+    @extend .header-parallax; // Inherit styles from .header-parallax
+    background-image: url('/path/to/another/image.jpg'); // Specify new background image
 }
 
-  
-  
-  main {
-    background: #f5f5f5;
+// Main content and "About Us - The Creators" section
+main {
+    background: $background-color;
     position: relative;
-    top: 600px;
-    font-family: 'Raleway', sans-serif;
-    color: #111111;
-  }
+    top: 600px; // Adjust this based on actual layout
+    font-family: $font-family;
+    color: $text-color;
   
-  .container {
-    padding: 0 26%;
-  }
+    .container {
+        padding: 0 26%;
   
-  .container h1 {
-    padding: 1.2em 0 0 0;
-    font-size: 3.5em;
-    color: #212121;
-  }
-  .container h2 {
-    padding:0 0 0.8em 0.4em;
-    font-size:1.5em;
-  }
-  .container p {
-    padding-bottom: 1em;
-    font-size:1.6em;
-    line-height: 1.5;
-    color: #212121;
-  }
+        h1, h2 {
+            padding-top: 1.2em;
+            color: #212121;
+        }
   
+        h1 {
+            font-size: 3.5em;
+        }
   
+        h2 {
+            padding-bottom: 0.8em;
+            font-size: 1.5em;
+        }
+  
+        p {
+            padding-bottom: 1em;
+            font-size: 1.6em;
+            line-height: 1.5;
+        }
+    }
+}
+
+// "About Us - The Creators" content styling
+.creators-content {
+    @extend main; // Inherit styles from main
+    // Additional custom styles for "About Us" section
+}
