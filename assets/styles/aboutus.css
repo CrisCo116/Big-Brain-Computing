@@ -57,7 +57,7 @@ footer {
   position: fixed;
   height: 80%;
   background-position: center;
-  background-image: url("/Big-Brain-Computing/assets/images/seattle2.jpg");
+  background-image: url("../images/seattle.jpeg");
 }
 .header-parallax h1, .creators-parallax h1 {
   text-align: center;
