@@ -59,6 +59,10 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
+                var userName = document.getElementById('user_name').value;
+                var subject = 'New message from ' + userName;
+                var formData = this;
+                formData['subject'] = subject;
                 // these IDs from the previous steps
                 emailjs.sendForm('service_ar78t2d', 'template_exdimof', this)
                     .then(() => {
